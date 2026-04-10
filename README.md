@@ -123,13 +123,31 @@ The project can fall back to Python-based extraction, but ExifTool is preferred 
 
 ## Quick Start
 
+### Graphical User Interface (GUI)
+
+Launch the Streamlit-based web interface for visual analysis:
+
+```bash
+python forensicai.py --gui
+```
+
+### Interactive Wizard (Recommended)
+
+Launch the guided setup to select targets and analysis options through a series of prompts:
+
+```bash
+python forensicai.py
+```
+
+### Command Line Examples
+
 Analyze a single image:
 
 ```bash
 python forensicai.py --image path/to/evidence.jpg --report all
 ```
 
-Analyze a directory:
+Analyze a directory (Batch Mode):
 
 ```bash
 python forensicai.py --batch path/to/folder --report json
@@ -141,10 +159,10 @@ Compare multiple images:
 python forensicai.py --compare image1.jpg image2.jpg --compare-type metadata
 ```
 
-Interactive assistant:
+Interactive AI assistant:
 
 ```bash
-python forensicai.py --image path/to/evidence.jpg --interactive
+python forensicai.py --image path/to/evidence.jpg --ask
 ```
 
 Explain mode:
@@ -275,18 +293,6 @@ python forensicai.py --config path/to/config.yaml --image path/to/evidence.jpg
 - the project currently contains some in-progress source changes outside this README
 - the top-level launcher remains `forensicai.py`
 
-## Citation
-
-If you use this system in your research or forensic work, please cite:
-
-```bibtex
-@software{forensic_image_analysis_2026,
-  title={MetaForensicAI},
-  author={Sivamani},
-  year={2026},
-  url={https://github.com/dr0ng00/metadata_forensic_ai}
-}
-```
 
 ## License
 
