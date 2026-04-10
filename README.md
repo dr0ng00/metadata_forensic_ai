@@ -1,3 +1,4 @@
+
 ###############################################################################################
 ##                                                                                           ##
 ##  ##     ## ######## ########    ###    ########     ###    ########    ###                ##
@@ -19,6 +20,7 @@
 ##                  METADATA EXTRACTION AND IMAGE ANALYSIS SYSTEM                            ##
 ##                                                                                           ##
 ###############################################################################################
+
 
 # MetaForensicAI
 
@@ -151,15 +153,49 @@ Explain mode:
 python forensicai.py --image path/to/evidence.jpg --ai-mode explain --report html
 ```
 
-## CLI Notes
+## CLI Usage
 
-The main CLI supports:
+```
+usage: forensicai.py [-h] [--image IMAGE | --batch BATCH] [--output OUTPUT] [--ai-mode {explain}] [--ask [ASK]]
+                     [--report {pdf,json,html,txt,json-cli,raw-cli,both,all,none}] [--config CONFIG] [--case-id CASE_ID]
+                     [--analyst ANALYST] [--max-images MAX_IMAGES] [--verbose] [--debug]
 
-- single-image analysis with `--image`
-- batch analysis with `--batch`
-- comparison mode with `--compare`
-- multiple report formats via `--report`
-- explainability and analyst-assist modes via `--ai-mode`
+Metadata Extraction And Image Analysis System
+
+options:
+  -h, --help            show this help message and exit
+  --image, -i IMAGE     Path to image file for analysis
+  --batch, -b BATCH     Path to directory for batch analysis
+  --output, -o OUTPUT   Output directory for reports (default: ./results)
+  --ai-mode {explain}   MetaForensic AI analysis mode (current option: explain)
+  --ask [ASK]           Launch MetaForensic AI chatbox after analysis, optionally with an initial question.
+  --report, -r {pdf,json,html,txt,json-cli,raw-cli,both,all,none}
+                        Report format. Use "json-cli" for narrative or "raw-cli" for raw metadata to stdout. (default: all)
+  --config, -c CONFIG   Path to configuration file
+  --case-id CASE_ID     Case identifier for reporting
+  --analyst ANALYST     Analyst name for reporting
+  --max-images MAX_IMAGES
+                        Maximum number of images for batch analysis
+  --verbose, -v         Enable verbose logging
+  --debug, -d           Enable debug mode with detailed output
+
+Examples:
+  forensicai.py --image evidence.jpg
+  forensicai.py --batch evidence_folder/ --output reports/
+  forensicai.py --image evidence.jpg --report pdf --verbose
+```
+
+### Supported Report Formats
+
+- **pdf** - Professional PDF report with charts and visualizations
+- **json** - Structured JSON output for programmatic access
+- **html** - Interactive HTML report with detailed findings
+- **txt** - Plain text summary report
+- **json-cli** - Narrative JSON output to stdout
+- **raw-cli** - Raw metadata output to stdout
+- **both** - PDF and JSON formats
+- **all** - All available formats (default)
+- **none** - No report generation
 
 The main implementation lives in `src/main.py`.
 
