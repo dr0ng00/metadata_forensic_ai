@@ -3296,6 +3296,8 @@ Examples:
             
             # Display summary
             risk_assessment = results.get('risk_assessment', {})
+            if not isinstance(risk_assessment, dict):
+                risk_assessment = {}
             risk_score = risk_assessment.get('risk_score', 0)
             risk_level = risk_assessment.get('level', 'Unknown')
             origin = results.get('origin_detection', {}).get('primary_origin', 'Unknown')
@@ -3376,19 +3378,27 @@ Examples:
 
                 # Risk Assessment
                 print(f"\n{_blue_cli_label('[RISK ASSESSMENT]')}")
+                bayesian_risk = results.get('bayesian_risk', {})
+                if not isinstance(bayesian_risk, dict):
+                    bayesian_risk = {}
                 print(f"  Unified Risk Score: {risk_score}/100 ({risk_level})")
-                print(f"  Bayesian Predictive Risk: {results.get('bayesian_risk', {}).get('predictive_risk_score', 0)}/100 ({results.get('bayesian_risk', {}).get('risk_level', 'N/A')})")
+                print(f"  Bayesian Predictive Risk: {bayesian_risk.get('predictive_risk_score', 0)}/100 ({bayesian_risk.get('risk_level', 'N/A')})")
                 portrait_mobile_screenshot = forensic_system._is_portrait_mobile_screenshot(results.get('origin_detection', {}))
                 display_interpretation_cli = 'SYNTHETIC_CONTENT' if portrait_mobile_screenshot else risk_assessment.get('unified_interpretation', 'N/A')
                 print(f"  Forensic Interpretation: {display_interpretation_cli}")
 
                 # Origin
                 print(f"\n{_blue_cli_label('[ORIGIN IDENTIFICATION]')}")
-                # Format variables inline to behave identically
-                source_inf = results.get('origin_detection', {}).get('source_inference', 'Unknown')
+                
+                # Defensively get origin data
+                origin_data = results.get('origin_detection', {})
+                if not isinstance(origin_data, dict):
+                    origin_data = {}
+                
+                source_inf = origin_data.get('source_inference', 'Unknown')
                 capture_device = (
-                    results.get('origin_detection', {}).get('capture_device_inference')
-                    or results.get('origin_detection', {}).get('features', {}).get('capture_device_inference')
+                    origin_data.get('capture_device_inference')
+                    or origin_data.get('features', {}).get('capture_device_inference')
                     or source_inf
                 )
                 c2pa = results.get('c2pa', {}) or results.get('metadata', {}).get('c2pa', {}) or {}
@@ -3406,16 +3416,16 @@ Examples:
                     display_source = "Unknown"
 
                 display_origin_cli = capture_device
-                dev_type = results.get('origin_detection', {}).get('screenshot_device_info', {}).get('device_type', '') or ''
-                os_detected = results.get('origin_detection', {}).get('screenshot_device_info', {}).get('os_detected', '') or ''
+                dev_type = origin_data.get('screenshot_device_info', {}).get('device_type', '') or ''
+                os_detected = origin_data.get('screenshot_device_info', {}).get('os_detected', '') or ''
                 software_blob = str(
-                    results.get('origin_detection', {}).get('features', {}).get('software')
-                    or results.get('origin_detection', {}).get('features', {}).get('capture_device_inference')
+                    origin_data.get('features', {}).get('software')
+                    or origin_data.get('features', {}).get('capture_device_inference')
                     or ''
                 ).lower()
                 windows_detected = os_detected == "Windows (10/11)" or any(token in software_blob for token in ["windows 11", "windows 10", "windows camera", "microsoft camera"])
                 android_screenshot = bool(
-                    results.get('origin_detection', {}).get('screenshot_device_info', {})
+                    origin_data.get('screenshot_device_info', {})
                     .get('android_screenshot_analysis', {})
                     .get('is_android_screenshot')
                 )
@@ -3448,8 +3458,8 @@ Examples:
 
                 print(f"  Primary Origin: {display_origin_cli}")
                 print(f"  Source Inference: {display_source}")
-                print(f"  Confidence: {results.get('origin_detection', {}).get('confidence', 0)*100:.1f}%")
-                print(f"  Details: {results.get('origin_detection', {}).get('details')}")
+                print(f"  Confidence: {origin_data.get('confidence', 0)*100:.1f}%")
+                print(f"  Details: {origin_data.get('details')}")
 
                 # C2PA / Content Credentials
                 if isinstance(c2pa, dict) and c2pa:
