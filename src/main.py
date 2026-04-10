@@ -3492,6 +3492,9 @@ Examples:
                             print(f"  {k:<45}: {v}")
 
                 history = results.get('modification_history', {})
+                if not isinstance(history, dict):
+                    history = {}
+                
                 if history:
                     print(f"\n{_blue_cli_label('[MODIFICATION HISTORY]')}")
                     print(f"  Status: {history.get('status')}")
@@ -3499,18 +3502,30 @@ Examples:
                     print(f"  Likely Modified: {history.get('likely_modified')}")
                     print(f"  Summary: {history.get('summary')}")
                     for event in history.get('events', [])[:8]:
-                        print(f"  - {event.get('event')}: {event.get('timestamp') or 'N/A'} | {event.get('details')}")
+                        if isinstance(event, dict):
+                            print(f"  - {event.get('event')}: {event.get('timestamp') or 'N/A'} | {event.get('details')}")
 
                 # Explanations (XAI)
-                print(f"\n{_blue_cli_label('[FORENSIC JUSTIFICATIONS (XAI)]')}")
-                for exp in results.get('explanations', []):
-                    print(f"  - [{exp.get('severity', 'INFO')}] {exp.get('title')}: {exp.get('observation')}")
+                explanations = results.get('explanations', [])
+                if not isinstance(explanations, list):
+                    explanations = []
+                
+                if explanations:
+                    print(f"\n{_blue_cli_label('[FORENSIC JUSTIFICATIONS (XAI)]')}")
+                    for exp in explanations:
+                        if isinstance(exp, dict):
+                            print(f"  - [{exp.get('severity', 'INFO')}] {exp.get('title')}: {exp.get('observation')}")
 
                 # Explain Mode Structured Output
                 explain_reasoning = results.get('explain_forensic_reasoning', {})
+                if not isinstance(explain_reasoning, dict):
+                    explain_reasoning = {}
+                
                 if explain_reasoning:
                     print(f"\n{_blue_cli_label('[EXPLAIN OUTPUT (STRUCTURED)]')}")
                     plain = explain_reasoning.get('0_plain_language_summary', {})
+                    if not isinstance(plain, dict):
+                        plain = {}
                     if plain:
                         print(_blue_cli_label("0. Plain-Language Summary"))
                         print(f"  verdict: {plain.get('simple_verdict')}")
