@@ -1,0 +1,29 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include EXIFTOOL_INSTALLATION.md
+include METAFORENSIC_AI_SYSTEM_PROMPT.md
+include requirements.txt
+include pyproject.toml
+
+recursive-include config *.py *.json *.yaml *.yml
+recursive-include src *.py
+recursive-include scripts *.py *.sh
+recursive-include tests *.py *.json *.yaml *.yml
+
+prune .venv
+prune venv
+prune build
+prune dist
+prune datasets
+prune results
+prune forensic_results
+prune final_narrative_results
+prune __pycache__
+
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude .DS_Store
+global-exclude Thumbs.db

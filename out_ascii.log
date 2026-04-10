@@ -1,0 +1,36 @@
+﻿python : usage: main.py [-h] [--image IMAGE | --batch BATCH] [--output OUTPUT]
+At line:1 char:1
++ python -m src.main test_whatsapp.png > out.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (usage: main.py ...-output OUTPUT]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+               [--interactive] [--ai-mode {explain}] [--ask [ASK]]
+               [--report {pdf,json,html,txt,json-cli,raw-cli,both,all,none}]
+               [--config CONFIG] [--case-id CASE_ID] [--analyst ANALYST]
+               [--max-images MAX_IMAGES] [--verbose] [--debug]
+main.py: error: unrecognized arguments: test_whatsapp.png
+PyTorch not installed. Deep learning features disabled.
+
+[94m###############################################################################################
+##                                                                                           ##
+##  ##     ## ######## ########    ###    ########     ###    ########    ###                ##
+##  ###   ### ##          ##      ## ##   ##     ##   ## ##      ##      ## ##               ##
+##  #### #### ##          ##     ##   ##  ##     ##  ##   ##     ##     ##   ##              ##
+##  ## ### ## ######      ##    ##     ## ##     ## ##     ##    ##    ##     ##             ##
+##  ##     ## ##          ##    ######### ##     ## #########    ##    #########             ##
+##  ##     ## ##          ##    ##     ## ##     ## ##     ##    ##    ##     ##             ##
+##  ##     ## ########    ##    ##     ## ########  ##     ##    ##    ##     ##             ##
+##                                                                                           ##
+##  ########  #######  ########  ######## ##    ##  ######  ####  ######      ###    ####    ##
+##  ##       ##     ## ##     ## ##       ###   ## ##    ##  ##  ##    ##    ## ##    ##     ##
+##  ##       ##     ## ##     ## ##       ####  ## ##        ##  ##         ##   ##   ##     ##
+##  ######   ##     ## ########  ######   ## ## ##  ######   ##  ##        ##     ##  ##     ##
+##  ##       ##     ## ##   ##   ##       ##  ####       ##  ##  ##        #########  ##     ##
+##  ##       ##     ## ##    ##  ##       ##   ### ##    ##  ##  ##    ##  ##     ##  ##     ##
+##  ##        #######  ##     ## ######## ##    ##  ######  ####  ######   ##     ## ####    ##
+##                                                                                           ##
+##                  METADATA EXTRACTION AND IMAGE ANALYSIS SYSTEM                            ##
+##                                                                                           ##
+###############################################################################################[0m
+

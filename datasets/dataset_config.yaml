@@ -1,0 +1,254 @@
+# METADATA EXTRACTION AND IMAGE ANALYSIS SYSTEM Dataset Configuration
+# Version: 2.0.0
+
+dataset:
+  name: "METADATA EXTRACTION AND IMAGE ANALYSIS SYSTEM Dataset"
+  version: "2.0.0"
+  creation_date: "2026-03-13"
+  maintainer: "Sivamani"
+  contact_email: "sivamani116166@gmail.com"
+  license: "CC BY-NC-SA 4.0"
+  citation: |
+    @dataset{metadata_extraction_and_image_analysis_system_2026,
+      title={METADATA EXTRACTION AND IMAGE ANALYSIS SYSTEM Dataset},
+      author={Sivamani},
+      year={2026},
+      note={Local project dataset configuration}
+    }
+  description: |
+    Local dataset configuration for organizing, validating, and benchmarking
+    forensic image collections used by the METADATA EXTRACTION AND IMAGE ANALYSIS SYSTEM project.
+
+ground_truth:
+  original_camera:
+    enabled: true
+    sources:
+      - type: "DSLR"
+        brands: ["Canon", "Nikon", "Sony", "Fujifilm", "Panasonic"]
+        count_per_model: 100
+        include_raw: true
+        metadata_required: ["EXIF", "XMP", "MakerNotes"]
+      - type: "Smartphone"
+        brands: ["Apple", "Samsung", "Google", "Xiaomi"]
+        models: ["iPhone 13-15", "Galaxy S21-S23", "Pixel 6-8"]
+        count_per_model: 50
+        include_heic: true
+    quality_requirements:
+      min_resolution: [1920, 1080]
+      max_resolution: [8192, 6144]
+      formats: ["JPEG", "HEIC", "RAW"]
+      compression_quality: [85, 100]
+    organization:
+      hierarchy: "brand/model/serial/"
+      naming_convention: "{brand}_{model}_{serial}_{timestamp}.{ext}"
+      metadata_file: "camera_profiles.json"
+
+  social_media:
+    enabled: true
+    platforms:
+      facebook:
+        collection_method: "Manual"
+        categories: ["profile", "timeline", "ads", "marketplace"]
+        compression_levels: ["low", "medium", "high"]
+        include_metadata: true
+      instagram:
+        collection_method: "Manual"
+        content_types: ["posts", "stories", "reels", "highlights"]
+        aspect_ratios: ["1:1", "4:5", "9:16"]
+        max_download_quality: true
+      twitter:
+        collection_method: "Manual"
+        include_retweets: true
+        include_threads: true
+      tiktok:
+        collection_method: "Manual"
+        video_frames: 10
+        include_watermark: true
+      whatsapp:
+        collection_method: "Simulated"
+        compression: "WhatsApp-specific"
+    collection_parameters:
+      date_range: ["2020-01-01", "2026-03-13"]
+      geographic_diversity: true
+      content_diversity: ["people", "landscape", "urban", "objects"]
+
+  edited_images:
+    enabled: true
+    software:
+      photoshop:
+        versions: ["CC 2023", "CC 2024"]
+        operations:
+          basic: ["crop", "resize", "rotate", "flip"]
+          color: ["levels", "curves", "hue_saturation", "color_balance"]
+          filters: ["blur", "sharpen", "noise", "vignette"]
+          retouching: ["healing", "clone_stamp", "liquify"]
+        save_settings: [".psd", ".jpg", ".png"]
+      lightroom:
+        operations: ["presets", "profiles", "grading", "masking"]
+        export_quality: [60, 100]
+      mobile_apps:
+        apps: ["VSCO", "Snapseed", "Photoshop Express", "Lightroom Mobile"]
+        filters: ["preset_packs", "custom_filters"]
+    edit_logging:
+      enabled: true
+      format: "JSON"
+      include_history: true
+      include_parameters: true
+
+  manipulated:
+    enabled: true
+    manipulation_types:
+      splicing:
+        difficulty_levels: ["easy", "medium", "hard", "expert"]
+        mask_included: true
+        blending_methods: ["simple", "gradient", "frequency"]
+        post_processing: ["blur", "noise", "color_match"]
+      cloning:
+        brush_sizes: ["small", "medium", "large"]
+        pattern_types: ["random", "systematic", "adaptive"]
+        source_regions: ["same_image", "different_image"]
+      generative:
+        models:
+          stable_diffusion: ["1.5", "2.1", "XL"]
+          midjourney: ["v5", "v6"]
+          dall_e: ["2", "3"]
+          controlnet: ["canny", "depth", "pose"]
+        prompts_included: true
+        seed_included: true
+      removal:
+        object_sizes: ["small", "medium", "large"]
+        background_complexity: ["simple", "complex", "textured"]
+        inpainting_methods: ["traditional", "ai_based"]
+      addition:
+        object_types: ["people", "objects", "text", "logos"]
+        realism_levels: ["low", "medium", "high"]
+    ground_truth:
+      masks: true
+      bounding_boxes: true
+      manipulation_parameters: true
+      before_after_pairs: true
+
+validation_sets:
+  blind_test:
+    set_a:
+      size: 1000
+      composition: "balanced"
+      source_distribution: "stratified"
+      difficulty: "mixed"
+    set_b:
+      size: 1000
+      composition: "challenging"
+      source_distribution: "random"
+      difficulty: "hard"
+
+  competition:
+    micc_f220:
+      include: true
+      preprocessing: "consistent"
+      annotations: "converted"
+    casia_v2:
+      include: true
+      version: "2.0"
+      categories: ["splice", "copy-move"]
+    coverage:
+      include: true
+      resolution: "original"
+
+  challenges:
+    real_world_cases:
+      count: 50
+      sources: ["legal_cases", "journalism", "academic"]
+      documentation: "complete"
+    synthetic_challenges:
+      count: 100
+      complexity: ["simple", "complex", "composite"]
+
+image_properties:
+  formats:
+    primary: "JPEG"
+    secondary: ["PNG", "WebP", "HEIC"]
+    raw: ["CR2", "NEF", "ARW", "DNG"]
+  resolutions:
+    categories:
+      low: [[640, 480], [800, 600]]
+      medium: [[1920, 1080], [2560, 1440]]
+      high: [[4000, 3000], [6000, 4000]]
+      ultra: [[8000, 6000]]
+  quality_settings:
+    jpeg_quality: [60, 70, 80, 90, 100]
+    compression_levels: ["low", "medium", "high", "maximum"]
+  metadata:
+    exif: true
+    xmp: true
+    iptc: true
+    icc_profiles: true
+    platform_specific: true
+
+organization:
+  directory_structure: "hierarchical"
+  naming_convention: "{category}_{id}_{source}_{date}_{hash}.{ext}"
+  file_indexing:
+    enabled: true
+    format: "Parquet"
+    columns: ["path", "category", "source", "metadata", "hash"]
+  version_control:
+    enabled: true
+    hash_algorithm: "SHA256"
+    incremental_updates: true
+
+distribution:
+  split:
+    train: 70
+    val: 15
+    test: 15
+  seed: 42
+  shuffle: true
+  balancing:
+    strategy: "stratified"
+    min_samples_per_class: 50
+    max_samples_per_class: 1000
+
+quality_assurance:
+  validation:
+    manual_verification: true
+    automated_checks: true
+    duplicate_detection: true
+  integrity:
+    checksums: true
+    metadata_consistency: true
+    format_validation: true
+  statistics:
+    generate_reports: true
+    update_frequency: "monthly"
+
+legal:
+  data_protection:
+    anonymization: true
+    consent_required: true
+    privacy_policy: "included"
+  licensing:
+    dataset_license: "CC BY-NC-SA 4.0"
+    commercial_use: "restricted"
+    attribution_required: true
+  compliance:
+    gdpr_compliant: true
+    copyright_cleared: true
+    ethical_review: "completed"
+
+maintenance:
+  update_schedule: "quarterly"
+  backup_frequency: "weekly"
+  archive_old_versions: true
+  changelog: "maintained"
+
+contact:
+  maintainer: "Sivamani"
+  email: "sivamani116166@gmail.com"
+  issues: "Report issues directly to the maintainer by email"
+  documentation: "Use local project files and scripts documentation"
+
+usage_guidelines:
+  citation_required: true
+  commercial_license: "separate"
+  modifications_allowed: "with attribution"
+  redistribution: "restricted"

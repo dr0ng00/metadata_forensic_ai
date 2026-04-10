@@ -1,0 +1,828 @@
+{
+    "authentic": false,
+    "confidence": 0.8999999999999999,
+    "origin_status": "LIKELY REAL (MINOR ANOMALIES)",
+    "flags": [
+        "Missing essential DateTimeOriginal metadata"
+    ],
+    "risk_score": 10.0,
+    "image_path": "test_whatsapp.png",
+    "case_info": {},
+    "analysis_timestamp": "2026-03-27T01:10:15.019106",
+    "metadata": {
+        "file_info": {
+            "File Name": "test_whatsapp.png",
+            "Directory": "C:\\metadata_extraction_and_image_analysis_system",
+            "File Size": "6.9 KiB",
+            "File Modification Date/Time": "2026:03:27 01:07:09",
+            "File Access Date/Time": "2026:03:27 01:10:14",
+            "File Inode Change Date/Time": "2026:03:27 01:07:09",
+            "File Permissions": "-rw-rw-rw-",
+            "File Type": "PNG",
+            "File Type Extension": "png",
+            "MIME Type": "image/png",
+            "absolute_path": "C:\\metadata_extraction_and_image_analysis_system\\test_whatsapp.png",
+            "size_bytes": 7077
+        },
+        "image_info": {
+            "format": "PNG",
+            "mode": "RGB",
+            "size": [
+                800,
+                600
+            ],
+            "width": 800,
+            "height": 600,
+            "info": {}
+        },
+        "exif": "ABSENT",
+        "xmp": "ABSENT",
+        "iptc": "ABSENT",
+        "gps": "ABSENT",
+        "icc_profile": "ABSENT",
+        "makernotes": "ABSENT",
+        "thumbnails": "ABSENT",
+        "composite": {
+            "Image Size": "800x600",
+            "Megapixels": 0.5
+        },
+        "summary": {
+            "dimensions": "800x600",
+            "format": "PNG",
+            "datetime_original": null,
+            "camera_make": null,
+            "camera_model": null,
+            "software": null,
+            "software_candidates": []
+        },
+        "domains": {
+            "image_format": {
+                "label": "PNG",
+                "expertise": {
+                    "forensics": "Chunk ordering, ancillary data validation"
+                }
+            },
+            "manufacturer": {
+                "label": "Generic",
+                "expertise": {
+                    "notes": "Generic hardware analysis"
+                }
+            },
+            "raw_domain": {
+                "is_raw": false
+            },
+            "standards_present": [],
+            "geospatial": {
+                "has_geotag": false,
+                "modules": []
+            }
+        },
+        "modification_history": {
+            "status": "no_clear_modification_history",
+            "confidence": "low",
+            "likely_modified": false,
+            "original_capture_time": null,
+            "digitized_time": null,
+            "file_modified_time": "2026:03:27 01:07:09",
+            "software_detected": [],
+            "xmp_history_entries": [],
+            "origin_assessment": "origin_unverified",
+            "timestamp_issues": [],
+            "forensic_flags": [
+                "Missing essential DateTimeOriginal metadata"
+            ],
+            "events": [
+                {
+                    "event": "filesystem_modified_time",
+                    "timestamp": "2026:03:27 01:07:09",
+                    "source": "filesystem",
+                    "confidence": "medium",
+                    "details": "Filesystem modification timestamp recorded for current file."
+                }
+            ],
+            "summary": "Origin assessment indicates synthetic content."
+        }
+    },
+    "domains": {
+        "image_format": {
+            "label": "PNG",
+            "expertise": {
+                "forensics": "Chunk ordering, ancillary data validation"
+            }
+        },
+        "manufacturer": {
+            "label": "Generic",
+            "expertise": {
+                "notes": "Generic hardware analysis"
+            }
+        },
+        "raw_domain": {
+            "is_raw": false
+        },
+        "standards_present": [],
+        "geospatial": {
+            "has_geotag": false,
+            "modules": []
+        }
+    },
+    "origin_detection": {
+        "primary_origin": "origin_unverified",
+        "confidence": 0.6,
+        "features": {
+            "software": "",
+            "software_fields": {},
+            "metadata_density": 0,
+            "resolution": "800x600",
+            "aspect_ratio": 1.33,
+            "dpi": null,
+            "has_gps": false,
+            "thumbnail_present": false,
+            "c2pa": {},
+            "platform_hint": null,
+            "has_camera_make": false,
+            "has_camera_model": false,
+            "has_lens_model": false,
+            "has_datetime_original": false,
+            "camera_signature_strength": 0,
+            "signal_vector": {
+                "camera_exif_strength": 0.0,
+                "camera_pipeline_strength": 0.25334636950345585,
+                "edit_software_strength": 0.0,
+                "reencode_strength": 0.1,
+                "metadata_stripped_likelihood": 1.0,
+                "synthetic_graphic_strength": 0.14933072609930884,
+                "ai_indicator_strength": 0.22499999999999998,
+                "screenshot_strength": 0.4,
+                "conflict_level": 0.0
+            },
+            "source_inference": "Camera",
+            "screenshot_device_info": {
+                "device_type": "Unknown",
+                "possible_device_models": [],
+                "os_detected": "Unknown",
+                "capture_mode": "Unknown",
+                "ui_elements": [],
+                "typography": "Not analyzed from pixels by current pipeline.",
+                "key_evidence": [
+                    "Resolution 800 x 600 with aspect ratio ~1.33:1",
+                    "Minimal camera metadata presence",
+                    "Metadata profile is sparse and non-camera-like"
+                ],
+                "digital_markers": [
+                    "Camera metadata is absent or minimal",
+                    "Camera EXIF is absent or minimal"
+                ],
+                "android_screenshot_analysis": {
+                    "is_android_screenshot": false,
+                    "confidence": 13.0,
+                    "score": 13,
+                    "max_score": 100,
+                    "android_version": null,
+                    "device_model": null,
+                    "screenshot_method": "Unknown",
+                    "factors": {
+                        "camera_metadata_absent": "Camera EXIF is absent or minimal",
+                        "sparse_metadata": "Metadata density is typical of screenshots"
+                    },
+                    "recommendations": [
+                        "Android screenshot evidence is limited; treat as a generic screenshot unless more metadata is available."
+                    ]
+                },
+                "confidence_score": {
+                    "platform_os_identification": 55,
+                    "specific_hardware": 20
+                },
+                "final_verdict": "Digital screenshot indicators detected. Inferred source: Unknown.",
+                "limitations": [
+                    "Identification is based on metadata sparsity, filename/tool signatures, and resolution heuristics.",
+                    "The current pipeline does not perform OCR, window-control recognition, or font identification on screenshot pixels.",
+                    "Specific physical hardware cannot be conclusively identified from a screenshot alone."
+                ]
+            },
+            "raw_signals": {
+                "exif_presence": {
+                    "make": 0,
+                    "model": 0,
+                    "lens": 0,
+                    "exposure": 0,
+                    "iso": 0
+                },
+                "file_structure": {
+                    "camera_structure_score": 0.0,
+                    "editing_container_score": 0.0
+                },
+                "visual": {
+                    "natural_noise_score": 0.6333659237586396,
+                    "smooth_gradient_score": 0.0,
+                    "uniform_texture_score": 0.0,
+                    "ai_frequency_anomaly_score": 0.0
+                },
+                "qtables": {
+                    "software_qtable_score": 0.0,
+                    "double_compression_score": 0.0
+                },
+                "software_signals": {
+                    "editing_software_score": 0.0,
+                    "platform_reencode_score": 0.0,
+                    "platform_hint": null
+                },
+                "ai_meta_signals": {
+                    "ai_metadata_score": 0.0
+                },
+                "ai_structural_score": 0.75,
+                "demosaic_strength": 0.0,
+                "screenshot_signals": {
+                    "matched_tokens": [],
+                    "screen_resolution_score": 0.0,
+                    "metadata_strip_score": 1.0,
+                    "capture_mode": "Unknown",
+                    "os_detected": "Unknown",
+                    "android_screenshot_score": 0.13,
+                    "android_screenshot_confidence": 13.0
+                }
+            },
+            "capture_device_inference": "Camera"
+        },
+        "details": "Evidence is insufficient or conflicting for a definitive origin class.",
+        "is_synthetic": false,
+        "platform_fingerprint": null,
+        "source_inference": "Camera",
+        "capture_device_inference": "Camera",
+        "screenshot_device_info": {
+            "device_type": "Unknown",
+            "possible_device_models": [],
+            "os_detected": "Unknown",
+            "capture_mode": "Unknown",
+            "ui_elements": [],
+            "typography": "Not analyzed from pixels by current pipeline.",
+            "key_evidence": [
+                "Resolution 800 x 600 with aspect ratio ~1.33:1",
+                "Minimal camera metadata presence",
+                "Metadata profile is sparse and non-camera-like"
+            ],
+            "digital_markers": [
+                "Camera metadata is absent or minimal",
+                "Camera EXIF is absent or minimal"
+            ],
+            "android_screenshot_analysis": {
+                "is_android_screenshot": false,
+                "confidence": 13.0,
+                "score": 13,
+                "max_score": 100,
+                "android_version": null,
+                "device_model": null,
+                "screenshot_method": "Unknown",
+                "factors": {
+                    "camera_metadata_absent": "Camera EXIF is absent or minimal",
+                    "sparse_metadata": "Metadata density is typical of screenshots"
+                },
+                "recommendations": [
+                    "Android screenshot evidence is limited; treat as a generic screenshot unless more metadata is available."
+                ]
+            },
+            "confidence_score": {
+                "platform_os_identification": 55,
+                "specific_hardware": 20
+            },
+            "final_verdict": "Digital screenshot indicators detected. Inferred source: Unknown.",
+            "limitations": [
+                "Identification is based on metadata sparsity, filename/tool signatures, and resolution heuristics.",
+                "The current pipeline does not perform OCR, window-control recognition, or font identification on screenshot pixels.",
+                "Specific physical hardware cannot be conclusively identified from a screenshot alone."
+            ]
+        },
+        "final_classification": "Unknown Origin",
+        "reasoning": "Evidence is insufficient or conflicting for a definitive origin class.",
+        "evidence_used": [
+            "Insufficient signal strength for a definitive origin class."
+        ],
+        "confidence_score": 0.6,
+        "forensic_signals_detected": {
+            "camera_exif_strength": 0.0,
+            "camera_pipeline_strength": 0.2533,
+            "edit_software_strength": 0.0,
+            "reencode_strength": 0.1,
+            "metadata_stripped_likelihood": 1.0,
+            "synthetic_graphic_strength": 0.1493,
+            "ai_indicator_strength": 0.225,
+            "screenshot_strength": 0.4,
+            "conflict_level": 0.0
+        }
+    },
+    "app_detection": {
+        "app": "Discord",
+        "confidence": "15.848671",
+        "details": [
+            [
+                "Color",
+                "15.848671"
+            ]
+        ],
+        "category": "Other"
+    },
+    "contextual_analysis": {
+        "issues": [],
+        "confidence": 1.0,
+        "risk_score": 0.0,
+        "findings": {
+            "gps_trustworthy": true,
+            "day_night_consistent": true,
+            "metadata_hour": null,
+            "inferred_location": {}
+        }
+    },
+    "timestamp_analysis": {
+        "issues": [],
+        "confidence": 1.0,
+        "timestamp_audit": {
+            "original": null,
+            "digitized": null,
+            "is_consistent": true
+        }
+    },
+    "artifact_analysis": {
+        "ela_results": {
+            "max_difference": 19.0,
+            "scale_factor": 13.42,
+            "ela_intensity": "NORMAL",
+            "resized_for_speed": false,
+            "status": "SUCCESS"
+        },
+        "qtable_audit": {
+            "status": "SKIPPED",
+            "reason": "Not a JPEG file"
+        },
+        "advanced_flags": []
+    },
+    "correlation": {
+        "unified_interpretation": "camera_post_processed",
+        "indicators": [
+            "Missing essential DateTimeOriginal metadata"
+        ],
+        "conflicts": [],
+        "origin_summary": "ML predicted origin_unverified with 1 consistency flags found.",
+        "confidence_modifier": 1.0
+    },
+    "risk_assessment": {
+        "risk_score": 15.2,
+        "level": "LOW",
+        "factors": {
+            "authenticity": {
+                "value": 10.0,
+                "weight": 0.25,
+                "influence": 2.5
+            },
+            "origin": {
+                "value": 30,
+                "weight": 0.25,
+                "influence": 7.5
+            },
+            "contextual": {
+                "value": 0.0,
+                "weight": 0.2,
+                "influence": 0.0
+            },
+            "timestamp": {
+                "value": 0.0,
+                "weight": 0.15,
+                "influence": 0.0
+            },
+            "correlation": {
+                "value": 35,
+                "weight": 0.15,
+                "influence": 5.25,
+                "interpretation": "camera_post_processed"
+            }
+        },
+        "findings_summary": "Forensic Risk: LOW (15.2/100). Primary interpretation: camera_post_processed.",
+        "unified_interpretation": "camera_post_processed"
+    },
+    "bayesian_risk": {
+        "predictive_risk_score": 0.0,
+        "risk_level": "LOW",
+        "prior_probability": 0.2,
+        "evidence_cues_used": [],
+        "interpretation": "Bayesian model predicts LOW risk from 0 cue(s).",
+        "calibration_note": "No manipulation cues detected; predictive risk set to 0.",
+        "manipulation_confirmed": false
+    },
+    "explanations": [
+        {
+            "title": "Metadata Preservation Limitation",
+            "observation": "Metadata appears removed during export. Editing application cannot be identified.",
+            "triggers": {
+                "Origin Classification": "origin_unverified"
+            },
+            "logic": "Missing camera and software attribution metadata prevents definitive lineage attribution.",
+            "significance": "This is a forensic limitation notice, not direct proof of synthetic generation.",
+            "causes": {
+                "legitimate": "Messaging app or social media export stripped metadata.",
+                "malicious": "Intentional metadata scrubbing before distribution."
+            },
+            "confidence": "MEDIUM",
+            "severity": "MEDIUM"
+        },
+        {
+            "title": "Unified Forensic Conclusion",
+            "observation": "Multi-source correlation interprets this evidence as camera post processed.",
+            "triggers": {
+                "Interpretation": "camera_post_processed"
+            },
+            "logic": "Aggregated findings from ML classification, rule-based logic, and statistical anomalies converge on this result.",
+            "significance": "Provides a single, weighted determination for the trier of fact.",
+            "causes": {
+                "legitimate": "General consistency across all forensic modules.",
+                "malicious": "Converged evidence of intentional manipulation or fabrication."
+            },
+            "confidence": "HIGH",
+            "severity": "CRITICAL"
+        }
+    ],
+    "ai_mode": "explain",
+    "evidence_integrity": {
+        "verified": true,
+        "file_path": "C:\\metadata_extraction_and_image_analysis_system\\test_whatsapp.png",
+        "file_size_bytes": 7077,
+        "hashes": {
+            "sha256": "93415227735c169712ba6d04d439adc199fb22d82342e7438b20b945b55e5a3a",
+            "md5": "55d7467e2b74774e1b303f0e327521df"
+        },
+        "processed": true,
+        "processing_timestamp": "2026-03-27T01:10:14.235897"
+    },
+    "modification_history": {
+        "status": "no_clear_modification_history",
+        "confidence": "low",
+        "likely_modified": false,
+        "original_capture_time": null,
+        "digitized_time": null,
+        "file_modified_time": "2026:03:27 01:07:09",
+        "software_detected": [],
+        "xmp_history_entries": [],
+        "origin_assessment": "origin_unverified",
+        "timestamp_issues": [],
+        "forensic_flags": [
+            "Missing essential DateTimeOriginal metadata"
+        ],
+        "events": [
+            {
+                "event": "filesystem_modified_time",
+                "timestamp": "2026:03:27 01:07:09",
+                "source": "filesystem",
+                "confidence": "medium",
+                "details": "Filesystem modification timestamp recorded for current file."
+            }
+        ],
+        "summary": "Origin assessment indicates synthetic content."
+    },
+    "explainability_breakdown": {
+        "pipeline_mode": "explain",
+        "module_outputs": {
+            "authenticity": {
+                "flags": [
+                    "Missing essential DateTimeOriginal metadata"
+                ],
+                "confidence": 0.8999999999999999,
+                "risk_score": 10.0
+            },
+            "origin_detection": {
+                "primary_origin": "origin_unverified",
+                "confidence": 0.6,
+                "features": {
+                    "software": "",
+                    "software_fields": {},
+                    "metadata_density": 0,
+                    "resolution": "800x600",
+                    "aspect_ratio": 1.33,
+                    "dpi": null,
+                    "has_gps": false,
+                    "thumbnail_present": false,
+                    "c2pa": {},
+                    "platform_hint": null,
+                    "has_camera_make": false,
+                    "has_camera_model": false,
+                    "has_lens_model": false,
+                    "has_datetime_original": false,
+                    "camera_signature_strength": 0,
+                    "signal_vector": {
+                        "camera_exif_strength": 0.0,
+                        "camera_pipeline_strength": 0.25334636950345585,
+                        "edit_software_strength": 0.0,
+                        "reencode_strength": 0.1,
+                        "metadata_stripped_likelihood": 1.0,
+                        "synthetic_graphic_strength": 0.14933072609930884,
+                        "ai_indicator_strength": 0.22499999999999998,
+                        "screenshot_strength": 0.4,
+                        "conflict_level": 0.0
+                    },
+                    "source_inference": "Camera",
+                    "screenshot_device_info": {
+                        "device_type": "Unknown",
+                        "possible_device_models": [],
+                        "os_detected": "Unknown",
+                        "capture_mode": "Unknown",
+                        "ui_elements": [],
+                        "typography": "Not analyzed from pixels by current pipeline.",
+                        "key_evidence": [
+                            "Resolution 800 x 600 with aspect ratio ~1.33:1",
+                            "Minimal camera metadata presence",
+                            "Metadata profile is sparse and non-camera-like"
+                        ],
+                        "digital_markers": [
+                            "Camera metadata is absent or minimal",
+                            "Camera EXIF is absent or minimal"
+                        ],
+                        "android_screenshot_analysis": {
+                            "is_android_screenshot": false,
+                            "confidence": 13.0,
+                            "score": 13,
+                            "max_score": 100,
+                            "android_version": null,
+                            "device_model": null,
+                            "screenshot_method": "Unknown",
+                            "factors": {
+                                "camera_metadata_absent": "Camera EXIF is absent or minimal",
+                                "sparse_metadata": "Metadata density is typical of screenshots"
+                            },
+                            "recommendations": [
+                                "Android screenshot evidence is limited; treat as a generic screenshot unless more metadata is available."
+                            ]
+                        },
+                        "confidence_score": {
+                            "platform_os_identification": 55,
+                            "specific_hardware": 20
+                        },
+                        "final_verdict": "Digital screenshot indicators detected. Inferred source: Unknown.",
+                        "limitations": [
+                            "Identification is based on metadata sparsity, filename/tool signatures, and resolution heuristics.",
+                            "The current pipeline does not perform OCR, window-control recognition, or font identification on screenshot pixels.",
+                            "Specific physical hardware cannot be conclusively identified from a screenshot alone."
+                        ]
+                    },
+                    "raw_signals": {
+                        "exif_presence": {
+                            "make": 0,
+                            "model": 0,
+                            "lens": 0,
+                            "exposure": 0,
+                            "iso": 0
+                        },
+                        "file_structure": {
+                            "camera_structure_score": 0.0,
+                            "editing_container_score": 0.0
+                        },
+                        "visual": {
+                            "natural_noise_score": 0.6333659237586396,
+                            "smooth_gradient_score": 0.0,
+                            "uniform_texture_score": 0.0,
+                            "ai_frequency_anomaly_score": 0.0
+                        },
+                        "qtables": {
+                            "software_qtable_score": 0.0,
+                            "double_compression_score": 0.0
+                        },
+                        "software_signals": {
+                            "editing_software_score": 0.0,
+                            "platform_reencode_score": 0.0,
+                            "platform_hint": null
+                        },
+                        "ai_meta_signals": {
+                            "ai_metadata_score": 0.0
+                        },
+                        "ai_structural_score": 0.75,
+                        "demosaic_strength": 0.0,
+                        "screenshot_signals": {
+                            "matched_tokens": [],
+                            "screen_resolution_score": 0.0,
+                            "metadata_strip_score": 1.0,
+                            "capture_mode": "Unknown",
+                            "os_detected": "Unknown",
+                            "android_screenshot_score": 0.13,
+                            "android_screenshot_confidence": 13.0
+                        }
+                    },
+                    "capture_device_inference": "Camera"
+                },
+                "details": "Evidence is insufficient or conflicting for a definitive origin class.",
+                "is_synthetic": false,
+                "platform_fingerprint": null,
+                "source_inference": "Camera",
+                "capture_device_inference": "Camera",
+                "screenshot_device_info": {
+                    "device_type": "Unknown",
+                    "possible_device_models": [],
+                    "os_detected": "Unknown",
+                    "capture_mode": "Unknown",
+                    "ui_elements": [],
+                    "typography": "Not analyzed from pixels by current pipeline.",
+                    "key_evidence": [
+                        "Resolution 800 x 600 with aspect ratio ~1.33:1",
+                        "Minimal camera metadata presence",
+                        "Metadata profile is sparse and non-camera-like"
+                    ],
+                    "digital_markers": [
+                        "Camera metadata is absent or minimal",
+                        "Camera EXIF is absent or minimal"
+                    ],
+                    "android_screenshot_analysis": {
+                        "is_android_screenshot": false,
+                        "confidence": 13.0,
+                        "score": 13,
+                        "max_score": 100,
+                        "android_version": null,
+                        "device_model": null,
+                        "screenshot_method": "Unknown",
+                        "factors": {
+                            "camera_metadata_absent": "Camera EXIF is absent or minimal",
+                            "sparse_metadata": "Metadata density is typical of screenshots"
+                        },
+                        "recommendations": [
+                            "Android screenshot evidence is limited; treat as a generic screenshot unless more metadata is available."
+                        ]
+                    },
+                    "confidence_score": {
+                        "platform_os_identification": 55,
+                        "specific_hardware": 20
+                    },
+                    "final_verdict": "Digital screenshot indicators detected. Inferred source: Unknown.",
+                    "limitations": [
+                        "Identification is based on metadata sparsity, filename/tool signatures, and resolution heuristics.",
+                        "The current pipeline does not perform OCR, window-control recognition, or font identification on screenshot pixels.",
+                        "Specific physical hardware cannot be conclusively identified from a screenshot alone."
+                    ]
+                },
+                "final_classification": "Unknown Origin",
+                "reasoning": "Evidence is insufficient or conflicting for a definitive origin class.",
+                "evidence_used": [
+                    "Insufficient signal strength for a definitive origin class."
+                ],
+                "confidence_score": 0.6,
+                "forensic_signals_detected": {
+                    "camera_exif_strength": 0.0,
+                    "camera_pipeline_strength": 0.2533,
+                    "edit_software_strength": 0.0,
+                    "reencode_strength": 0.1,
+                    "metadata_stripped_likelihood": 1.0,
+                    "synthetic_graphic_strength": 0.1493,
+                    "ai_indicator_strength": 0.225,
+                    "screenshot_strength": 0.4,
+                    "conflict_level": 0.0
+                }
+            },
+            "contextual_analysis": {
+                "issues": [],
+                "confidence": 1.0,
+                "risk_score": 0.0,
+                "findings": {
+                    "gps_trustworthy": true,
+                    "day_night_consistent": true,
+                    "metadata_hour": null,
+                    "inferred_location": {}
+                }
+            },
+            "timestamp_analysis": {
+                "issues": [],
+                "confidence": 1.0,
+                "timestamp_audit": {
+                    "original": null,
+                    "digitized": null,
+                    "is_consistent": true
+                }
+            },
+            "artifact_analysis": {
+                "ela_results": {
+                    "max_difference": 19.0,
+                    "scale_factor": 13.42,
+                    "ela_intensity": "NORMAL",
+                    "resized_for_speed": false,
+                    "status": "SUCCESS"
+                },
+                "qtable_audit": {
+                    "status": "SKIPPED",
+                    "reason": "Not a JPEG file"
+                },
+                "advanced_flags": []
+            },
+            "correlation": {
+                "unified_interpretation": "camera_post_processed",
+                "indicators": [
+                    "Missing essential DateTimeOriginal metadata"
+                ],
+                "conflicts": [],
+                "origin_summary": "ML predicted origin_unverified with 1 consistency flags found.",
+                "confidence_modifier": 1.0
+            },
+            "risk_assessment": {
+                "risk_score": 15.2,
+                "level": "LOW",
+                "factors": {
+                    "authenticity": {
+                        "value": 10.0,
+                        "weight": 0.25,
+                        "influence": 2.5
+                    },
+                    "origin": {
+                        "value": 30,
+                        "weight": 0.25,
+                        "influence": 7.5
+                    },
+                    "contextual": {
+                        "value": 0.0,
+                        "weight": 0.2,
+                        "influence": 0.0
+                    },
+                    "timestamp": {
+                        "value": 0.0,
+                        "weight": 0.15,
+                        "influence": 0.0
+                    },
+                    "correlation": {
+                        "value": 35,
+                        "weight": 0.15,
+                        "influence": 5.25,
+                        "interpretation": "camera_post_processed"
+                    }
+                },
+                "findings_summary": "Forensic Risk: LOW (15.2/100). Primary interpretation: camera_post_processed.",
+                "unified_interpretation": "camera_post_processed"
+            },
+            "bayesian_risk": {
+                "predictive_risk_score": 0.0,
+                "risk_level": "LOW",
+                "prior_probability": 0.2,
+                "evidence_cues_used": [],
+                "interpretation": "Bayesian model predicts LOW risk from 0 cue(s).",
+                "calibration_note": "No manipulation cues detected; predictive risk set to 0.",
+                "manipulation_confirmed": false
+            }
+        },
+        "explanation_count": 2,
+        "explanation_titles": [
+            "Metadata Preservation Limitation",
+            "Unified Forensic Conclusion"
+        ],
+        "decision_trace": {
+            "unified_interpretation": "camera_post_processed",
+            "risk_level": "LOW",
+            "risk_score": 15.2
+        }
+    },
+    "explain_forensic_reasoning": {
+        "0_plain_language_summary": {
+            "simple_verdict": "Not enough evidence for a firm conclusion",
+            "plain_confidence": "HIGH",
+            "what_supports_this": [
+                "No timestamp conflicts were detected.",
+                "No contextual contradictions were detected."
+            ],
+            "what_this_does_not_prove": [
+                "Compression artifacts alone are not proof of malicious tampering.",
+                "No single module is treated as conclusive evidence on its own."
+            ],
+            "recommended_reading": "Use this plain summary first; technical sections below provide supporting detail."
+        },
+        "1_multi_domain_risk_assessment": {
+            "structural_risk": "LOW",
+            "metadata_integrity_risk": "LOW",
+            "temporal_consistency_risk": "LOW",
+            "synthetic_probability": "LOW",
+            "platform_reencoding_probability": "LOW",
+            "unified_manipulation_likelihood": "LOW"
+        },
+        "2_evidence_severity_classification": [
+            {
+                "indicator": "Missing essential DateTimeOriginal metadata",
+                "severity": "LOW",
+                "reason": "Single-module indicator without corroborating multi-domain contradictions."
+            }
+        ],
+        "3_model_conflict_analysis": {
+            "deterministic_aggregation": {
+                "risk_score": 15.2,
+                "risk_level": "LOW",
+                "interpretation": "camera_post_processed"
+            },
+            "bayesian_predictive_model": {
+                "risk_score": 0,
+                "risk_level": "LOW",
+                "interpretation": "Bayesian model predicts LOW risk from 0 cue(s)."
+            },
+            "conflict_detected": false,
+            "dominance_factors": [
+                "No timestamp inconsistencies detected",
+                "No contextual contradictions detected"
+            ]
+        },
+        "4_bayesian_calibration_commentary": {
+            "likelihood_overweighted": false,
+            "commentary": "Bayesian structural cues should be interpreted with cross-module agreement; structural artifacts alone are insufficient to assert malicious manipulation."
+        },
+        "5_unified_interpretation_improved_classification": "INCONCLUSIVE",
+        "6_forensic_confidence_index": {
+            "level": "HIGH",
+            "basis": "Confidence is derived from cross-module agreement, camera-origin strength, and deterministic-vs-probabilistic consistency."
+        },
+        "7_narrative_forensic_summary": "The evidence shows synthetic content characteristics with no temporal inconsistencies and no contextual contradictions. Structural compression indicators are present, which support post-processing or re-encoding scenarios. These structural indicators are not treated as standalone proof of malicious manipulation. Metadata appears removed during export. Editing application cannot be identified."
+    },
+    "include_raw": false
+}
