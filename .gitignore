@@ -1,0 +1,47 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Project specific
+results/
+tmp*/
+*.json
+out*.log
+forensic_analysis.log
+test_out.txt
+
+# Temporary files
+*.tmp
+*.bak
+.DS_Store
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Dependencies lock (if using poetry)
+poetry.lock

@@ -54,10 +54,10 @@ JPEG, PNG, TIFF, HEIF, RAW, WebP, and more
 
 ### Installation
 
-#### 1. Clone theRepository
+#### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/metadata-extraction-analysis.git
-cd metadata-extraction-analysis
+git clone https://github.com/dr0ng00/metadata_forensic_ai.git
+cd metadata_forensic_ai
 ```
 
 #### 2. Create Virtual Environment
@@ -318,12 +318,11 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 If you use this system in your research or forensic work, please cite:
 
 ```bibtex
-@software{metadata_extraction_2026,
-  title={Metadata Extraction and Image Analysis System for Digital Forensics},
+@software{forensic_image_analysis_2026,
+  title={Metadata ForensicAI},
   author={Sivamani},
   year={2026},
-  version={1.0.0},
-  url={https://github.com/yourusername/metadata-extraction-analysis}
+  url={https://github.com/dr0ng00/metadata_forensic_ai}
 }
 ```
 
@@ -331,7 +330,7 @@ If you use this system in your research or forensic work, please cite:
 
 ## 🐛 Issues & Support
 
-- **Bug Reports**: [GitHub Issues](https://github.com/yourusername/metadata-extraction-analysis/issues)
+- **Bug Reports**: [GitHub Issues](https://github.com/dr0ng00/metadata_forensic_ai/issues)
 - **Documentation**: See [README.md](README.md) and [INSTALLATION.md](INSTALLATION.md)
 - **Troubleshooting**: Check [INSTALLATION.md#troubleshooting](INSTALLATION.md#troubleshooting)
 
