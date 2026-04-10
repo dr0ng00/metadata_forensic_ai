@@ -1,0 +1,9 @@
+{
+  "pythonVersion": "3.10",
+  "pythonPlatform": "Windows",
+  "typeCheckingMode": "basic",
+  "include": ["src", "tests", "scripts"],
+  "exclude": ["**/node_modules", "**/__pycache__", ".venv"],
+  "venvPath": ".venv",
+  "extraPaths": ["src"]
+}

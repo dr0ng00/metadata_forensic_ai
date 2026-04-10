@@ -28,7 +28,7 @@ Thumbs.db
 # Project specific
 results/
 tmp*/
-*.json
+# *.json (REMOVED: too broad, use results/*.json instead if needed)
 out*.log
 forensic_analysis.log
 test_out.txt
