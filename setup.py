@@ -72,8 +72,6 @@ setup(
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "Topic :: Scientific/Engineering :: Image Recognition",
         
-        # License
-        "License :: OSI Approved :: MIT License",
         
         # Programming Language
         "Programming Language :: Python :: 3",
@@ -161,7 +159,6 @@ setup(
         # Documentation
         ("share/doc/metadata_extraction_and_image_analysis_system", [
             "README.md",
-            "LICENSE",
             "CONTRIBUTING.md",
             "CODE_OF_CONDUCT.md",
         ]),
@@ -222,7 +219,6 @@ setup(
     ],
     
     # License
-    license="MIT",
     
     # Platform
     platforms=["Linux", "Mac OS-X", "Windows"],
@@ -693,7 +689,6 @@ about:
   email: "contact@metaforensicai.org"
   website: "https://metaforensicai.org"
   repository: "https://metaforensicai.org"
-  license: "MIT"
   copyright: "Copyright 2024 MetaForensicAI Research Team"
 """
             default_config.write_text(default_config_content)

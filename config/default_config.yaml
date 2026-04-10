@@ -567,11 +567,10 @@ legal:
   copyright_notice: |
     MetaForensicAI v1.0.0
     Copyright © 2024 MetaForensicAI Research Team
-    Licensed under the MIT License
     
     This software includes components from:
+
     - ExifTool by Phil Harvey
     - Python Imaging Library (PIL)
     - Various open-source Python libraries
-    
-    See LICENSE file for complete terms and conditions.
+

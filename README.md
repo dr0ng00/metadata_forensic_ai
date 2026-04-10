@@ -296,7 +296,3 @@ python forensicai.py --config path/to/config.yaml --image path/to/evidence.jpg
 - the project currently contains some in-progress source changes outside this README
 - the top-level launcher remains `forensicai.py`
 
-
-## License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

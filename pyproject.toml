@@ -8,7 +8,6 @@ version = "1.0.0"
 description = "METADATA EXTRACTION AND IMAGE ANALYSIS SYSTEM."
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
 authors = [
     { name = "Sivamani" }
 ]
@@ -26,7 +25,6 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -92,7 +90,6 @@ metadata-extraction-and-image-analysis-system = "src.main:main"
 
 [tool.setuptools]
 include-package-data = true
-license-files = ["LICENSE"]
 
 [tool.setuptools.packages.find]
 where = ["."]
