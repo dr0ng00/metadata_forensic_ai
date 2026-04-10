@@ -210,7 +210,6 @@ Examples:
 ### Supported Report Formats
 
 - **pdf** - Professional PDF report with charts and visualizations
-- **json** - Structured JSON output for programmatic access
 - **html** - Interactive HTML report with detailed findings
 - **txt** - Plain text summary report
 - **json-cli** - Narrative JSON output to stdout
