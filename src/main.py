@@ -2950,7 +2950,6 @@ def _select_output_directory(current_default: str) -> str:
         "1) Output directory",
         [
             "Use desktop folder (Desktop\\forensic_reports)",
-            "Use timestamped folder under ./results",
             "Enter custom path",
             "Do not save report files"
         ],
@@ -2959,8 +2958,6 @@ def _select_output_directory(current_default: str) -> str:
 
     if choice.startswith("Use desktop folder"):
         return str(Path.home() / "Desktop" / "forensic_reports")
-    if choice.startswith("Use timestamped folder"):
-        return f"./results/session_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     if choice.startswith("Do not save report files"):
         return "__NO_FILE_OUTPUT__"
     return _prompt_text("   Enter custom output directory", current_default)
